@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prod-build": "cross-env NODE_ENV=production  webpack --config ./webpack/webpack.dev.config.js --progress --colors",
+    "build:prod": "docker build -t nony1992/zen-production .",
+    "start:prod": "docker run --rm -d -p 80:80 --name running-zen nony1992/zen-production",
+    "stop:prod": "docker stop running-zen",
     "dev-serve": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/webpack.dev.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
