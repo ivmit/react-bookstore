@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-      "outDir": "./dist/",
+      "outDir": "dist",
       "sourceMap": true,
-      "noImplicitAny": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "strictNullChecks": false,
       "module": "commonjs",
       "target": "es5",
       "jsx": "react"
   },
-  "include": [
-      "./src/**/*"
+  "exclude": [
+    "dist",
+    "node_modules"
   ]
 }
